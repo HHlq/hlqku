@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<!--<div id="box">
+			{{msg}}
+			<div v-bind:title="msg">dnlsndls</div>
+			<div v-html="msg"></div>
+			<input type="checkbox" v-bind:checked="flag" />
+		    <input type="checkbox" v-model="flag" />
+		    <input type="text" maxlength="20"  v-model="msg"/>还可以输入{{20-msg.length}}个
+		</div>-->
+		<div id="box1">
+			<input type="number" v-model="height" />
+			<input type="number" v-model="width" /><br />
+			<h1></h1>
+		<!--	<input type="range" max="255" min="0"  v-model="r"/>
+			    <input type="range" max="255" min="0"  v-model="g"/>
+			    <input type="range" max="255" min="0"  v-model="b"/>
+			    <div class="color" v-bind:style="{width: width+'px', height: height+'px',
+				 background: 'rgb('+r+','+g+','+b+')'}">bbb</div>-->
+				 
+				 
+				<!-- 调色板-->
+				<input type="color" v-model="bg" />
+			    <h1></h1>
+				<div class="color" v-bind:style="{width: width+'px', height: height+'px',
+				 background:bg}">bbb</div>
+			
+		</div>
+		
+		
+	</body>
+</html>
+<script src="js/vue.js"></script>
+<script>
+	/*var vm=new Vue({
+		el:"#box",
+		data:{
+			msg:"<h1>hello</h1>",
+			mag:"world",
+			flag:true
+		},
+		//template:"<p>{{mag}}</p>"
+		
+	})*/
+	var vm1=new Vue({
+		el:"#box1",
+		data:{
+			width:200,
+			height:200,
+			r:255,
+			g:0,
+			b:0,
+			bg:"#ccc"
+		}
+	})
+</script>
